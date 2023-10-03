@@ -1,0 +1,198 @@
+/* Estilos generales */
+body {
+    font-family: Poiret One , Arial, sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el encabezado y la barra de navegación */
+header {
+    background-color: #f8f8f8;
+    padding: 10px 0;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+  width: 100px; /* Tamaño deseado para el logo */
+    height: 100px; /* Misma altura que el ancho para hacer un círculo */
+    border-radius: 50%; /* Borde redondo para hacer un círculo */
+    margin-bottom: 10px; /* Espacio entre el logo y el nombre */
+}
+
+.nombre-negocio {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #f39c12;
+}
+
+/* Estilos para el contenido principal */
+.hero {
+    background-image: url('https://img.freepik.com/free-vector/floral-line-art-flat-design-background_79603-2392.jpg?w=900&t=st=1692990188~exp=1692990788~hmac=456c380f53f1ecae0aa77ae0256bbceff13430fa6f3e82495344ad61b56e398c');
+    background-size: 40%;
+    color: black;
+    text-align: center;
+    padding: 100px 0;
+ 
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  font-size: 45px;
+}
+
+.hero p {
+    font-size: 25px;
+    margin-bottom: 40px;
+    color: black;
+    font-weight: normal;
+}
+
+.btn {
+    background-color: #f39c12;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e67e22;
+}
+
+/* Estilos para la sección de productos */
+.productos {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+   }
+
+.titulo{
+  
+ width: 100%; /* Opcional: para asegurarse de que ocupe todo el ancho */
+  margin-bottom: 20px;
+}
+
+.producto {
+    margin: 10px;
+  width: 25%; /* Tamaño de cada div (33.33% - espacios entre divs) */
+  margin-bottom: 20px;
+  display: inline-block;
+  flex-wrap: wrap;
+  vertical-align: top; /* Alinea los productos en la parte superior */
+}
+
+.producto img {
+    max-width: 100%; /* Limita el ancho máximo de la imagen al 100% del contenedor */
+    max-height: 250px; /* Limita la altura máxima de la imagen a 250px */
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+.producto h3 {
+white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    overflow: hidden; /* Oculta el texto que excede el ancho del contenedor */
+    text-overflow: ellipsis; /* Muestra puntos suspensivos (...) para indicar texto oculto */
+    max-width: 400px; /* Establece un ancho máximo para el título */
+   text-align: center; /* Centra el texto horizontalmente */
+}
+}
+
+.producto p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.Ubicacion{
+
+    overflow:hidden;
+
+    padding-bottom:56.25%;
+
+    position:relative;
+
+    height:0;
+
+}
+
+.Ubicacion iframe{
+
+    left:0;
+
+    top:0;
+
+    height:100%;
+
+    width:100%;
+
+    position:absolute;
+
+}
+.titulo-mapa{
+ width: 100%; /* Opcional: para asegurarse de que ocupe todo el ancho */
+  margin-top: 10px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Estilos para la sección de contacto */
+.contacto {
+    background-color: #f8f8f8;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contacto h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Media queries para diseño responsivo */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 0;
+    }
+
+    .productos, .Ubicacion, .contacto {
+        padding: 40px 0;
+    }
+}

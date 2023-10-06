@@ -60,13 +60,14 @@ ul li a:hover {
     color: black;
     text-align: center;
     padding: 100px 0;
+
  
 }
 
 .hero h1 {
     font-size: 36px;
     margin-bottom: 20px;
-  font-size: 45px;
+   font-size: 45px;
 }
 
 .hero p {
@@ -82,7 +83,7 @@ ul li a:hover {
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.1s ease;
 }
 
 .btn:hover {
@@ -104,16 +105,18 @@ ul li a:hover {
 }
 
 .producto {
-    margin: 10px;
+    margin: 50px;
   width: 25%; /* Tamaño de cada div (33.33% - espacios entre divs) */
   margin-bottom: 20px;
   display: inline-block;
   flex-wrap: wrap;
   vertical-align: top; /* Alinea los productos en la parte superior */
+  transition: transform 0.20s ease;
 }
 
 .producto img {
     max-width: 100%; /* Limita el ancho máximo de la imagen al 100% del contenedor */
+    height: auto;
     max-height: 250px; /* Limita la altura máxima de la imagen a 250px */
     border-radius: 5px;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
@@ -121,17 +124,21 @@ ul li a:hover {
 }
 
 .producto h3 {
-white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+   white-space: nowrap; /* Evita que el texto se divida en varias líneas */
     overflow: hidden; /* Oculta el texto que excede el ancho del contenedor */
     text-overflow: ellipsis; /* Muestra puntos suspensivos (...) para indicar texto oculto */
     max-width: 400px; /* Establece un ancho máximo para el título */
    text-align: center; /* Centra el texto horizontalmente */
-}
+
 }
 
 .producto p {
     font-size: 16px;
     margin-top: 10px;
+}
+
+.producto:hover {
+    transform: scale(1.10); /* Aumenta el tamaño al hacer hover */
 }
 
 .Ubicacion{
@@ -186,6 +193,73 @@ footer {
     color: #fff;
 }
 
+.barra-flotante {
+    position: fixed;
+    display: none;
+    align-items: center;
+    bottom: 20px; /* Ajusta la distancia desde la parte inferior */
+    left: 50%; /* Ajusta la distancia desde la derecha */
+    background-color: #ffffff; /* Color de fondo de la barra */
+    transform: translateX(-50%); /* Centra horizontalmente */
+    padding: 6px; /* Espaciado dentro de la barra */
+    border-radius: 5px; /* Borde redondeado */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra */
+    z-index: 999; /* Capa z para que esté por encima de otros elementos */
+}
+
+/* Estilos para los botones dentro de la barra */
+.boton_barra {
+    background-color: white; /* Color de fondo del botón */
+    color: #007bff; /* Color de texto del botón */
+    border: none; /* Sin borde */
+    padding: 3px 3px; /* Espaciado dentro del botón */
+    align-content: center;
+    margin-right: 1px; /* Espacio entre botones */
+    border-radius: 3px; /* Borde redondeado */
+    cursor: pointer; /* Cursor de puntero al pasar el mouse */
+}
+
+/* Cambiar el color del botón al hacer hover */
+.boton_barra:hover {
+    background-color: white; /* Color de fondo al hacer hover */
+    color: #f39c12; /* Color de texto al hacer hover */
+    transition: color 0.4s ease;
+}
+
+.boton i {
+    margin-right: 2px; /* Espacio entre el ícono y el texto */
+    font-size: 70px; /* Tamaño del ícono */
+    color: #25D366
+}
+
+.icono_whatsapp {
+    margin-right: 2px; /* Espacio entre el ícono y el texto */
+    font-size: 30px; /* Tamaño del ícono */
+    color: #25D366
+}
+
+.icono_instagram {
+  
+   margin-right: 5px; /* Espacio entre el ícono y el texto */
+    font-size: 30px; /* Tamaño del ícono */
+    color: #E1306C
+}
+
+.icono_tel {
+  
+   margin-right: 5px; /* Espacio entre el ícono y el texto */
+    font-size: 26px; /* Tamaño del ícono */
+    color: #002d75
+}
+
+.icono_whatsapp:hover, .icono_instagram:hover, .icono_tel:hover{
+  background-color: white; /* Color de fondo al hacer hover */
+    color: #f39c12; /* Color de texto al hacer hover */
+    transition: color 0.4s ease;
+  }
+
+
+
 /* Media queries para diseño responsivo */
 @media (max-width: 768px) {
     .hero {
@@ -195,4 +269,8 @@ footer {
     .productos, .Ubicacion, .contacto {
         padding: 40px 0;
     }
+  
+  .barra-flotante{
+    display: block;
+  }
 }
